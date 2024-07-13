@@ -1,0 +1,150 @@
+body {
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+#gameTitle {
+  color: #feac32; /* Gold color */
+  font-family: 'Garamond', serif; /* A medieval-style font */
+  font-size: 48px; /* Larger font size for title */
+  margin: 20px auto; /* Center title with auto margins */
+  text-shadow: 2px 2px 4px #000; /* Shadow effect for depth */
+  text-align: center; /* Center text alignment */
+  width: 100%; /* Full width to help with centering */
+  background: linear-gradient(to bottom, #3a3a3a, #1a1a1a); /* Dark gradient background */
+  padding: 10px; /* Add some padding */
+  border-radius: 10px; /* Rounded corners */
+}
+
+
+#game {
+  max-width: 500px;
+  width: 100%;
+  background-color: #333333;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#stats, #controls, #monsterStats, #text {
+  font-size: 18px;
+  padding: 10px;
+  margin: 5px;
+  background-color: #444444;
+  border: 2px solid #555555;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#stats span, #monsterStats span {
+  flex: 1;
+  text-align: center;
+}
+
+#controls button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  border: 2px solid #555555;
+  border-radius: 5px;
+  background-color: #6d1b1b;
+  color: #f5f5f5;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#controls button:hover {
+  background-color: #902525;
+  transform: translateY(-2px);
+}
+
+#text {
+  background-color: #444444;
+  color: #ffffff;
+  padding: 10px;
+  font-size: 20px; /* Increase inner text size */
+  background: linear-gradient(to top, #535353, #1a1a1a); /* Dark gradient background */
+}
+
+.hidden {
+  display: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+@keyframes shake {
+  0% { transform: translate(0); }
+  25% { transform: translate(-5px); }
+  50% { transform: translate(5px); }
+  75% { transform: translate(-5px); }
+  100% { transform: translate(0); }
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+@keyframes flash {
+  0% { background-color: #fff; }
+  50% { background-color: #c70d0d; }
+  100% { background-color: #fff; }
+}
+
+.flash {
+  animation: flash 0.5s;
+}
+
+@keyframes healFlash {
+  0% { background-color: #fff; }
+  50% { background-color: #2ecc71; }
+  100% { background-color: #fff; }
+}
+
+.healFlash {
+  animation: healFlash 0.5s;
+}
+
+@keyframes monsterAttack {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.attackEffect {
+  animation: monsterAttack 0.3s;
+}
+
+@keyframes winCelebrate {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.winEffect {
+  animation: winCelebrate 1s;
+}
+
+@keyframes dieFlash {
+  0% { background-color: #fff; }
+  50% { background-color: #e74c3c; }
+  100% { background-color: #fff; }
+}
+
+.dieFlash {
+  animation: dieFlash 0.5s infinite;
+}

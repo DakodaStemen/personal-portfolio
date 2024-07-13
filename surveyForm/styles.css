@@ -1,0 +1,115 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #121212; /* Dark background */
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  height: 100vh; /* Full viewport height */
+}
+
+.form-container {
+  max-width: 800px; /* Increased max-width */
+  margin: auto;
+  background: #1e1e1e; /* Darker container */
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  padding: 50px; /* Increased padding */
+  transition: transform 0.05s;
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.form-container:hover {
+  transform: scale(1.02);
+}
+
+h1 {
+  margin-bottom: 15px; /* Adjusted spacing */
+  color: #bb86fc; /* Light purple */
+  text-align: center;
+  font-size: 2rem; /* Increased font size */
+}
+
+#description {
+  color: #b0bec5; /* Light gray */
+  margin-bottom: 25px; /* Adjusted spacing */
+  text-align: center;
+  font-size: 1.1rem; /* Increased font size */
+}
+
+.input-group {
+  margin-bottom: 25px; /* Increased spacing */
+  width: 100%; /* Full width */
+}
+
+label {
+  display: block;
+  margin-bottom: 8px; /* Adjusted spacing */
+  font-weight: 500;
+  color: #e0e0e0; /* Light gray */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #37474f; /* Dark border */
+  border-radius: 10px;
+  background: #263238; /* Dark input background */
+  color: #ffffff; /* White text */
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-size: 1rem; /* Increased font size */
+}
+
+input:focus {
+  border-color: #bb86fc; /* Focus color */
+  box-shadow: 0 0 5px rgba(187, 134, 252, 0.5);
+  outline: none;
+}
+
+.submit-btn {
+  background-color: #6200ea; /* Deep purple */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s, transform 0.2s;
+  font-size: 1.1rem; /* Increased font size */
+}
+
+.submit-btn:hover {
+  background-color: #3700b3; /* Darker purple */
+  transform: translateY(-2px);
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: 100%; /* Full width */
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #e0e0e0; /* Light gray */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    padding: 30px; /* Adjusted padding */
+  }
+}
